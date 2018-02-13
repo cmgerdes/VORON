@@ -955,6 +955,7 @@ void kill_screen(const char* lcd_msg) {
   void lcd_main_menu() {
     START_MENU();
     MENU_BACK(MSG_WATCH);
+    MENU_ITEM(function, "Lower Bed", lcd_lowerbed);
 
     #if ENABLED(CUSTOM_USER_MENUS)
       MENU_ITEM(submenu, MSG_USER_MENU, _lcd_user_menu);
@@ -3596,6 +3597,7 @@ void kill_screen(const char* lcd_msg) {
       MENU_ITEM(submenu, MSG_ZPROBE_ZOFFSET, lcd_babystep_zoffset);
     #elif HAS_BED_PROBE
       MENU_ITEM_EDIT(float32, MSG_ZPROBE_ZOFFSET, &zprobe_zoffset, Z_PROBE_OFFSET_RANGE_MIN, Z_PROBE_OFFSET_RANGE_MAX);
+      MENU_ITEM(function, "Re-home Z", lcd_rehome_z);
     #endif
 
     // M203 / M205 - Feedrate items

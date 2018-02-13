@@ -29,7 +29,7 @@
 // Include the base configuration for RAMPs 1.4
 #include "pins_RAMPS.h"
 
-#define CONTROLLER_FAN_PIN  -1 // Changed to -1 since hooked to always on.
+#define CONTROLLER_FAN_PIN  8 // Changed to -1 since hooked to always on.
  							 // LED strip can be attached to the same output. This way LEDs are only on during printing, and shortly afteR
 //#define USE_CONTROLLER_FAN true
 
@@ -37,7 +37,7 @@
 #define E0_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan
 #define E1_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan (same pin for both extruders since it's the same fan)
 
-#define FAN_PIN            		8 // Using the pin for the controller fan since controller fan is always on.
+#define FAN_PIN            		5 // Using the pin for the controller fan since controller fan is always on.
 
 // Extruders
 #define HEATER_0_PIN     10   // D10 on RAMPs. Extruder 1
