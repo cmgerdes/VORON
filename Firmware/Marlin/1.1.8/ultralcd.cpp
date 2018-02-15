@@ -826,6 +826,15 @@ void kill_screen(const char* lcd_msg) {
     }
   #endif // MENU_ITEM_CASE_LIGHT
 
+  // VORON Specific tweaks
+  void lcd_lowerbed() {
+    enqueue_and_echo_commands_P(PSTR("G91\nG1 Z20 F300\nG90"));
+  }
+
+  void lcd_rehome_z() {
+    enqueue_and_echo_commands_P(PSTR("G28 Z\nG1 Z0 F100"));
+  }
+
   #if ENABLED(BLTOUCH)
 
     /**
